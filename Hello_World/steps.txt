@@ -1,0 +1,37 @@
+{
+    // defining the name of the extension
+    "name": "Hello World",
+
+    // Adding description of the extension
+    "description" : "Base level extension",
+
+    // Defining version of the extension
+    "version" : "1.0", // or "0.0.1"
+
+    // Adding Manifest version
+    "mainfest_version" : 2, // or 3
+
+    // Browerser Actions
+    "browser_action":{
+        "default_popup": "hello.html",
+        "default_icon": "hello_extensions.png",
+        // the size of the image should be 128x128 pixels
+    },
+    
+    // Adding permissions if you want
+    "permissions" : ["activeTab"],
+
+    // Adding Icons
+    "icons" : {
+        "128" : "logo.png",
+    },
+
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+F",
+                "mac": "MacCtrl+Shift+F"
+            }
+        }
+    }
+}
