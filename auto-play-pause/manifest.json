@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Auto Play/Pause",
+  "version": "1.0",
+  "description": "Automatically plays or pauses YouTube videos when the tab is active or inactive.",
+  "permissions": [
+    "tabs",
+    "scripting",
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
